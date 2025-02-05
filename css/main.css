@@ -6,7 +6,7 @@ nav {
 ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
   padding: 0;
   padding-left: 200px;
 }
@@ -17,4 +17,7 @@ ul {
   position: absolute;
   top: -15px;
   left: 10px;
+}
+.cartheart {
+  width: 30px;
 }

@@ -1,13 +1,15 @@
 nav {
   display: flex;
-
+  background-color: #d8dad3;
   gap: 2rem;
+  margin: 0;
+  font-family: sans-serif;
 }
 ul {
   list-style: none;
   display: flex;
   gap: 5rem;
-  padding: 0;
+  padding-top: 10px;
   padding-left: 200px;
 }
 
@@ -15,7 +17,7 @@ ul {
   width: 100px;
   height: auto;
   position: absolute;
-  top: -15px;
+  top: -12px;
   left: 10px;
 }
 .cartheart {
@@ -25,4 +27,22 @@ ul {
 a {
   text-decoration: none;
   color: black;
+}
+.feature-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.feature {
+  width: 40%;
+  height: 400px;
+  object-fit: cover;
+  padding-top: 30px;
+}
+
+body {
+  background-color: #f1f2eb;
 }

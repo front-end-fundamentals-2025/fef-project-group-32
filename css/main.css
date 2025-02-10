@@ -17,7 +17,7 @@ ul {
   width: 100px;
   height: auto;
   position: absolute;
-  top: -12px;
+  top: -10px;
   left: 10px;
 }
 .cartheart {
@@ -27,6 +27,7 @@ ul {
 a {
   text-decoration: none;
   color: black;
+  flex: none;
 }
 .feature-container {
   display: flex;
@@ -34,10 +35,13 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 200%;
+  margin: auto;
+  padding-left: 140px;
 }
 
 .feature {
-  width: 40%;
+  width: 70%;
   height: 400px;
   object-fit: cover;
   padding-top: 30px;
@@ -45,4 +49,7 @@ a {
 
 body {
   background-color: #f1f2eb;
+}
+footer {
+  background-color: #d8dad3;
 }

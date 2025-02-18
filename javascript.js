@@ -24,6 +24,11 @@ const products = {
     image: "images/bwshoes.jpg",
     price: "$15.00",
   },
+  127: {
+    name: "Brown boots",
+    image: "images/winter-boots-3867776_1280.jpg",
+    price: "$15.00",
+  },
 };
 
 // Find the product element and show it

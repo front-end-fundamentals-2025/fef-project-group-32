@@ -12,11 +12,13 @@
         <img src="images/nordshoe.png" alt="Nordshoe logo" />
       </a>
       <ul class="nav-links">
-        <li><a href="#">Women's Shoes</a></li>
-        <li><a href="#">Men's Shoes</a></li>
-        <li><a href="sportshoes.html">Sportshoes</a></li>
-        <li><a href="login.html">Log In</a></li>
-        <li><a href="createaccount.html">Create Account</a></li>
+        <li><a href="#" class="list-links">Women's Shoes</a></li>
+        <li><a href="#" class="list-links">Men's Shoes</a></li>
+        <li><a href="sportshoes.html" class="list-links">Sportshoes</a></li>
+        <li><a href="login.html" class="list-links">Log In</a></li>
+        <li>
+          <a href="createaccount.html" class="list-links">Create Account</a>
+        </li>
       </ul>
       <div class="nav-icons">
         <input type="text" placeholder="Search.." class="search-box" />
@@ -27,17 +29,17 @@
       </div>
     </nav>
     <main>
-      <form class="create-account">
+      <form class="createaccount-form">
         <h2>Create Account</h2>
-        <div>
+        <div class="form-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required />
         </div>
-        <div>
+        <div class="form-group">
           <label for="phonenumber">Phonenumber</label>
           <input type="tel" id="phonenumber" name="phonenumber" required />
         </div>
-        <div>
+        <div class="form-group">
           <label for="password">Password</label>
           <input type="password" id="password" name="password" required />
         </div>
@@ -45,7 +47,7 @@
           Create Account
         </button>
 
-        <p>alredy have an account?</p>
+        <p class="change">Alredy have an account?</p>
         <a class="login-link" href="login.html">Log In</a>
       </form>
     </main>

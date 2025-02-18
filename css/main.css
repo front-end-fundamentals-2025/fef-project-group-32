@@ -39,6 +39,31 @@ nav {
   gap: 1rem;
 }
 
+.list-links {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+}
+
+.list-links::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: green;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.list-links:hover::after {
+  transform: scaleX(1);
+}
+
 .search-box {
   padding: 5px;
   border-radius: 5px;
@@ -179,18 +204,39 @@ body {
 /* log in form*/
 .login-form {
   background-color: #fff;
+  align-items: center;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
+  width: 30rem;
+}
+.form-group {
+  margin-bottom: 1rem;
 }
 
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type="password"],
+input[type="tel"] {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
 /* Checkbox styling  on log in page*/
 .form-check {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+}
+
+.form-check input {
+  margin-right: 0.5rem;
 }
 
 /* Button styling */
@@ -210,14 +256,31 @@ button:hover {
   background-color: rgb(164, 194, 165);
 }
 
+/*link styling for both create account and log in*/
+.login-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: rgb(86, 98, 70);
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.change {
+  text-align: center;
+  margin-top: 1rem;
+}
+
 /* create account from*/
-.create-account {
+.createaccount-form {
   background-color: #fff;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
+  width: 30rem;
 }
 /* Button styling */
 .createaccount-button {

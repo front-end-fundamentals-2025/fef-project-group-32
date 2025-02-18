@@ -19,6 +19,7 @@ nav {
   width: 100%;
 }
 
+/*the underline animation is made ny chatgpt */
 .nav-links {
   list-style: none;
   display: flex;
@@ -234,3 +235,5 @@ button:hover {
 button:hover {
   background-color: rgb(164, 194, 165);
 }
+
+/*  https://chatgpt.com/share/67b473ae-a644-8001-8302-5b8fe34375e1 */

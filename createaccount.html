@@ -27,7 +27,7 @@
       </div>
     </nav>
     <main>
-      <form action="/create">
+      <form class="create-account">
         <h2>Create Account</h2>
         <div>
           <label for="email">Email</label>
@@ -35,16 +35,18 @@
         </div>
         <div>
           <label for="phonenumber">Phonenumber</label>
-          <input type="number" id="phonenumber" name="phonenumber" required />
+          <input type="tel" id="phonenumber" name="phonenumber" required />
         </div>
         <div>
           <label for="password">Password</label>
           <input type="password" id="password" name="password" required />
         </div>
-        <button type="submit">Create Account</button>
+        <button class="createaccount-button" type="submit">
+          Create Account
+        </button>
 
         <p>alredy have an account?</p>
-        <a href="login.html">Log In</a>
+        <a class="login-link" href="login.html">Log In</a>
       </form>
     </main>
   </body>

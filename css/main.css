@@ -174,3 +174,63 @@ html,
 body {
   overflow-x: hidden;
 }
+
+/* log in form*/
+.login-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Checkbox styling  on log in page*/
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Button styling */
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: rgb(86, 98, 70);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgb(164, 194, 165);
+}
+
+/* create account from*/
+.create-account {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+/* Button styling */
+.createaccount-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: rgb(86, 98, 70);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgb(164, 194, 165);
+}

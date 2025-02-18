@@ -3,37 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our website</title>
+    <title>Our Website</title>
     <link rel="stylesheet" href="css/main.css" />
     <script src="javascript.js" defer></script>
   </head>
   <body>
     <nav>
-      <div class="logo">
-        <a href="index.html"
-          ><img src="images/nordshoe.png" alt="nordshoe logo" class="logo"
-        /></a>
-      </div>
-      <ul>
-        <li>womans shoes</li>
-        <li>mens shoes</li>
+      <a href="index.html" class="logo">
+        <img src="images/nordshoe.png" alt="Nordshoe logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#">Women's Shoes</a></li>
+        <li><a href="#">Men's Shoes</a></li>
         <li><a href="sportshoes.html">Sportshoes</a></li>
-        <li>log in</li>
-        <li>create account</li>
-        <input type="text" placeholder="Search.." />
-        <a href="cart.html">
-          <img src="images/cart-icon.svg" alt="cart icon" class="cartheart"
-        /></a>
-        <img src="images/heart-3510.svg" alt="heart icon" class="cartheart" />
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Create Account</a></li>
       </ul>
+      <div class="nav-icons">
+        <input type="text" placeholder="Search.." class="search-box" />
+        <a href="cart.html">
+          <img src="images/cart-icon.svg" alt="Cart icon" class="cartheart" />
+        </a>
+        <img src="images/heart-3510.svg" alt="Heart icon" class="cartheart" />
+      </div>
     </nav>
     <main>
       <div class="feature-container">
-        <img src="images/20pc.png" alt="20% off sign" class="feature" />
-        <a href="boots.html">
+        <a href="sportshoes.html" class="feature-link">
+          <img src="images/20pc.png" alt="20% off sign" class="feature" />
+        </a>
+        <a href="boots.html" class="feature-link">
           <img
             src="images/collection.png"
-            alt="winter boots collection"
+            alt="Winter boots collection"
             class="feature"
           />
         </a>
@@ -43,46 +45,37 @@
       <h2>Shop by Category</h2>
       <div class="category-grid">
         <div class="category">
-          <img src="sneakers.jpg" alt="Sneakers" />
+          <img src="images/greenjordans.jpg" alt="Sneakers" />
           <p>Sneakers</p>
         </div>
         <div class="category">
-          <img src="heels.jpg" alt="Heels" />
+          <img src="images/pexels-monicore-134064.jpg" alt="Heels" />
           <p>Heels</p>
         </div>
         <div class="category">
-          <img src="boots.jpg" alt="Boots" />
+          <img
+            src="images/joris-molenaar-AcqzusMJGcQ-unsplash.jpg"
+            alt="Boots"
+          />
           <p>Boots</p>
         </div>
         <div class="category">
-          <img src="sandals.jpg" alt="Sandals" />
+          <img src="images/Sandal-reunion-natur.jpg" alt="Sandals" />
           <p>Sandals</p>
         </div>
       </div>
     </section>
-
-    <section class="reviews">
-      <h2>What Our Customers Say</h2>
-      <div class="review">
-        <p>"Amazing quality and super comfortable!" - Jane Doe</p>
-      </div>
-      <div class="review">
-        <p>"Fast delivery and great service!" - John Smith</p>
-      </div>
-    </section>
-
     <section class="newsletter">
       <h2>Get 10% Off Your First Order</h2>
       <p>
-        Sign up for our newsletter to stay updated on new arrivals and exclusive
-        deals.
+        Sign up for our newsletter to stay updated on new collections and
+        exclusive deals!
       </p>
       <form>
-        <input type="email" placeholder="Enter your email" />
+        <input type="email" placeholder="Enter your email" required />
         <button type="submit">Subscribe</button>
       </form>
     </section>
-
     <footer>
       <div class="footer-content">
         <p>&copy; 2025 Nordshoe. All rights reserved.</p>

@@ -220,6 +220,7 @@ label {
   font-weight: bold;
 }
 
+input[type="emails"],
 input[type="password"],
 input[type="tel"] {
   width: 100%;

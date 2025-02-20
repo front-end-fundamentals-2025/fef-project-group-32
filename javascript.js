@@ -1,9 +1,9 @@
-// Get the product ID from the URL
-const urlParams = new URLSearchParams(window.location.search);
-const productId = urlParams.get("id");
+// Get the product ID from the URL (got how to it it from chatGPT)
+const productId = new URLSearchParams(window.location.search).get("id");
 
 // Define the products
 const products = {
+  //sportshoes
   123: {
     name: "Yellow Jordans",
     image: "images/yellowjordans.jpg",
@@ -25,6 +25,22 @@ const products = {
     price: "$15.00",
   },
   127: {
+    name: "Converse",
+    image: "images/converse.jpg",
+    price: "$15.00",
+  },
+  128: {
+    name: "Red nikes",
+    image: "images/redshoe.jpg",
+    price: "$15.00",
+  },
+  129: {
+    name: "white runner shoes",
+    image: "images/whiterrunshoues.jpg",
+    price: "$15.00",
+  },
+  //boots
+  201: {
     name: "Brown boots",
     image: "images/winter-boots-3867776_1280.jpg",
     price: "$15.00",

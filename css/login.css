@@ -1,4 +1,9 @@
+main {
+  margin-top: 8%;
+  margin-left: 25%;
+}
 /* log in form*/
+
 .login-form {
   background-color: #fff;
   align-items: center;

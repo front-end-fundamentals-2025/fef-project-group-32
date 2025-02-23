@@ -91,3 +91,7 @@
 .add-to-cart:hover {
   background-color: #222;
 }
+
+#product-description {
+  padding-bottom: 20px;
+}

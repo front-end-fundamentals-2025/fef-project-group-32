@@ -161,43 +161,57 @@ if (product) {
 document.addEventListener("DOMContentLoaded", function () {
   let addToCartButton = document.getElementById("add-to-cart");
 
-  console.log("Checking add-to-cart button:", addToCartButton);
-
   if (addToCartButton && product) {
     addToCartButton.addEventListener("click", function () {
+      console.log("🛒 Add to cart clicked!");
+
       // Get current cart from sessionStorage
       let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
-
-      // Fix: Filter out any `null` values from cart (cleans up existing corrupted data)
-      cart = cart.filter(
-        (item) => item !== null && item !== undefined && item.name
-      );
 
       // Ensure product ID is stored as a string
       let existingProduct = cart.find((item) => item.id === String(productId));
 
       if (existingProduct) {
-        alert("⚠️ Produkten finns redan i varukorgen!");
-        return;
+        // If product is already in cart, increase quantity
+        existingProduct.quantity += 1;
+      } else {
+        // Add new product with quantity = 1
+        let newProduct = {
+          id: String(productId),
+          name: product.name,
+          price: parseFloat(product.price), // Convert price to number
+          image: product.image,
+          quantity: 1,
+        };
+        cart.push(newProduct);
       }
-
-      // Create a new product object
-      let newProduct = {
-        id: String(productId),
-        name: product.name,
-        price: product.price,
-        image: product.image,
-        quantity: 1,
-      };
-
-      console.log("Adding product:", newProduct);
-      cart.push(newProduct);
 
       // Save updated cart to sessionStorage
       sessionStorage.setItem("cart", JSON.stringify(cart));
 
-      alert("✅ The product has been added to the cart !");
+      alert("✅ The product has been added to the cart!");
       console.log("Updated cart:", cart);
     });
   }
 });
+
+const sizeOptions = document.querySelectorAll(".size-option");
+
+sizeOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    sizeOptions.forEach((opt) => opt.classList.remove("selected"));
+    option.classList.add("selected");
+  });
+});
+if (existingProduct) {
+  existingProduct.quantity += 1;
+} else {
+  let newProduct = {
+    id: String(productId),
+    name: product.name,
+    price: product.price,
+    image: product.image,
+    quantity: 1,
+  };
+  cart.push(newProduct);
+}

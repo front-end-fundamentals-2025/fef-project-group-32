@@ -65,11 +65,9 @@
   background: white;
 }
 
-.size-option:hover,
 .size-option.selected {
   border-color: black;
 }
-
 /* Add to Cart Button */
 .add-to-cart {
   display: flex;

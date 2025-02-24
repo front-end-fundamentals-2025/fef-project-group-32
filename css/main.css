@@ -73,6 +73,7 @@ nav {
 .cartheart {
   width: 30px;
   cursor: pointer;
+  margin: 10px;
 }
 
 .logo img {

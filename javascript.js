@@ -155,108 +155,49 @@ if (product) {
   document.getElementById("product-price").innerText = product.price;
   document.getElementById("product-description").innerText =
     product.description || "No description available.";
-} else {
-  document.getElementById("product-details").innerHTML =
-    "<p style='color: red;'>Product not found.</p>";
 }
 
-// Load cart if on cart page
-if (document.getElementById("cart-container")) {
-  loadCart();
-}
+// Add product to cart
+document.addEventListener("DOMContentLoaded", function () {
+  let addToCartButton = document.getElementById("add-to-cart");
 
-// 🛒 Add Product to Cart (Ensure correct product is added!)
-function addToCart() {
-  if (!productId || !products[productId]) {
-    alert("Invalid product!");
-    return;
-  }
+  console.log("Checking add-to-cart button:", addToCartButton);
 
-  let cart = JSON.parse(sessionStorage.getItem("cart")) || {};
+  if (addToCartButton && product) {
+    addToCartButton.addEventListener("click", function () {
+      // Get current cart from sessionStorage
+      let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
 
-  if (cart[productId]) {
-    cart[productId].quantity++;
-  } else {
-    cart[productId] = { ...products[productId], quantity: 1 };
-  }
+      // Fix: Filter out any `null` values from cart (cleans up existing corrupted data)
+      cart = cart.filter(
+        (item) => item !== null && item !== undefined && item.name
+      );
 
-  sessionStorage.setItem("cart", JSON.stringify(cart));
-  alert(`${products[productId].name} added to cart!`);
+      // Ensure product ID is stored as a string
+      let existingProduct = cart.find((item) => item.id === String(productId));
 
-  // Redirect to cart.html after adding (optional)
-  window.location.href = "cart.html";
-}
-
-// 🛍 Load Cart in `cart.html`
-function loadCart() {
-  let cart = JSON.parse(sessionStorage.getItem("cart")) || {};
-  let cartContainer = document.getElementById("cart-container");
-
-  if (!cartContainer) return;
-  cartContainer.innerHTML = "";
-
-  let subtotal = 0;
-
-  for (let id in cart) {
-    let item = cart[id];
-    let total = item.price * item.quantity;
-    subtotal += total;
-
-    cartContainer.innerHTML += `
-    <div class="cart-item">
-        <img src="${item.image}" alt="${item.name}" class="cart-img">
-        <div class="cart-info">
-            <h2>${item.name}</h2>
-            <p>${item.description}</p>
-            <p><strong>Price:</strong> $${item.price.toFixed(2)}</p>
-            <p><strong>Total:</strong> $${total.toFixed(2)}</p>
-            <input type="number" value="${
-              item.quantity
-            }" min="1" data-id="${id}" class="cart-quantity">
-            <button onclick="removeFromCart('${id}')">Remove</button>
-        </div>
-    </div>
-  `;
-  }
-
-  updateCartSummary(subtotal);
-  addQuantityListeners();
-}
-
-// 🛒 Update Cart Summary (Dynamic Total Calculation)
-function updateCartSummary(subtotal) {
-  let tax = subtotal * 0.08;
-  let total = subtotal + tax;
-
-  document.getElementById("subtotal").innerText = `$${subtotal.toFixed(2)}`;
-  document.getElementById("tax").innerText = `$${tax.toFixed(2)}`;
-  document.getElementById("total").innerText = `$${total.toFixed(2)}`;
-}
-
-// 🔄 Handle Quantity Updates
-function addQuantityListeners() {
-  document.querySelectorAll(".cart-quantity").forEach((input) => {
-    input.addEventListener("change", function () {
-      let cart = JSON.parse(sessionStorage.getItem("cart")) || {};
-      let productId = this.getAttribute("data-id");
-      let newQuantity = parseInt(this.value);
-
-      if (newQuantity > 0) {
-        cart[productId].quantity = newQuantity;
-      } else {
-        delete cart[productId];
+      if (existingProduct) {
+        alert("⚠️ Produkten finns redan i varukorgen!");
+        return;
       }
 
-      sessionStorage.setItem("cart", JSON.stringify(cart));
-      loadCart();
-    });
-  });
-}
+      // Create a new product object
+      let newProduct = {
+        id: String(productId),
+        name: product.name,
+        price: product.price,
+        image: product.image,
+        quantity: 1,
+      };
 
-// 🗑 Remove Item from Cart
-function removeFromCart(productId) {
-  let cart = JSON.parse(sessionStorage.getItem("cart")) || {};
-  delete cart[productId];
-  sessionStorage.setItem("cart", JSON.stringify(cart));
-  loadCart();
-}
+      console.log("Adding product:", newProduct);
+      cart.push(newProduct);
+
+      // Save updated cart to sessionStorage
+      sessionStorage.setItem("cart", JSON.stringify(cart));
+
+      alert("✅ The product has been added to the cart !");
+      console.log("Updated cart:", cart);
+    });
+  }
+});

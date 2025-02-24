@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Cart</title>
     <script src="javascript.js" defer></script>
+    <script src="cart.js" defer></script>
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -32,20 +33,8 @@
         </a>
       </div>
     </nav>
-
-    <main>
-      <h1>Shopping Cart</h1>
-
-      <div id="cart-container">
-        <!-- Products will be inserted here -->
-    </div>
-
-    <div class="cart-summary">
-        <p><strong>Subtotal:</strong> <span id="subtotal">$0.00</span></p>
-        <p><strong>Tax (8%):</strong> <span id="tax">$0.00</span></p>
-        <p><strong>Total:</strong> <span id="total">$0.00</span></p>
-        <button>Checkout</button>
-    </div>
+    <h1>Your cart</h1>
+    <div id="cart-container"></div>
 
     <footer>
       <div class="footer-content">

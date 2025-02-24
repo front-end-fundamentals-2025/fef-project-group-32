@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="javascriptscript.js" defer></script>
+    <title>Shopping Cart</title>
+    <script src="javascript.js" defer></script>
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -32,35 +32,21 @@
         </a>
       </div>
     </nav>
-    <div class="cart-container">
-      <h2>Shopping Cart</h2>
-      <table class="cart-table">
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
-            <th>Remove</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Product Name</td>
-            <td>$10.00</td>
-            <td><input type="number" value="1" min="1" /></td>
-            <td>$10.00</td>
-            <td><button class="remove-button">X</button></td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="cart-summary">
-        <p><strong>Subtotal:</strong> 10.00€</p>
-        <p><strong>Tax:</strong> 0.80€</p>
-        <p><strong>Total:</strong> 10.80€</p>
-        <button class="checkout-buttonn">Checkout</button>
-      </div>
+
+    <main>
+      <h1>Shopping Cart</h1>
+
+      <div id="cart-container">
+        <!-- Products will be inserted here -->
     </div>
+
+    <div class="cart-summary">
+        <p><strong>Subtotal:</strong> <span id="subtotal">$0.00</span></p>
+        <p><strong>Tax (8%):</strong> <span id="tax">$0.00</span></p>
+        <p><strong>Total:</strong> <span id="total">$0.00</span></p>
+        <button>Checkout</button>
+    </div>
+
     <footer>
       <div class="footer-content">
         <p>&copy; 2025 Nordshoe. All rights reserved.</p>

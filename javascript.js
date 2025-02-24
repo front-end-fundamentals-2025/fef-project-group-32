@@ -7,96 +7,96 @@ const products = {
   123: {
     name: "Yellow Jordans",
     image: "images/yellowjordans.jpg",
-    price: "$10.00",
+    price: "10.00",
     description:
       "vibrant yellow upper that not only catches the eye but also redefines street style.",
   },
   124: {
     name: "Green Jordans",
     image: "images/greenjordans.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "Stylish and comfortable green Jordans for everyday wear.",
   },
   125: {
     name: "Colorful shoes",
     image: "images/colorfulshoes.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "A mix of colors to brighten your outfit and your day!",
   },
   126: {
     name: "Black and white shoes",
     image: "images/bwshoes.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "Classic black and white shoes that go with everything.",
   },
   127: {
     name: "Converse",
     image: "images/converse.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "Timeless Converse design that never goes out of style.",
   },
   128: {
     name: "Red nikes",
     image: "images/redshoe.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "Bold red Nikes for a standout look on any occasion.",
   },
   129: {
     name: "white runner shoes",
     image: "images/whiterrunshoues.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "Lightweight and comfortable running shoes for everyday use.",
   },
   //boots
   201: {
     name: "Brown boots",
     image: "images/winter-boots-3867776_1280.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "Durable and stylish brown boots for any occasion.",
   },
   202: {
     name: "Mocha boots",
     image: "images/mostafa-mahmoudi-3OZr-hLbsq0-unsplash.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "Sleek mocha-colored boots for a modern look.",
   },
   203: {
     name: "Warm boots ",
     image: "Images/nathan-dumlao-qxcQG21m_qE-unsplash.jpg",
-    price: "$15.00",
+    price: "15.00",
     description:
       "Super cozy boots designed to keep your feet warm in cold weather.",
   },
   204: {
     name: "Unique boots",
     image: "Images/the-nix-company-m6mAYVEHlNs-unsplash.jpg",
-    price: "$15.00",
+    price: "15.00",
     description:
       "Stand out with these uniquely designed boots that make a statement.",
   },
   205: {
     name: "Pink boots",
     image: "images/pinkboots.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "Cute pink boots for children!",
   },
   //heels
   301: {
     name: "Beige Pumps",
     image: "images/heels1.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "Stylish and modern to pump up your life!",
   },
   302: {
     name: "Heels with bow",
     image: "images/heels2.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "Cute heels with bows as an extra touch!",
   },
   303: {
     name: "Brown Low heels ",
     image: "images/heels3.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "Traditional heel",
   },
   304: {
@@ -108,7 +108,7 @@ const products = {
   305: {
     name: "Red heels",
     image: "images/redheels.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "They say red is the color of love...",
   },
 
@@ -116,31 +116,31 @@ const products = {
   401: {
     name: "Summer sandals",
     image: "images/Sandal-reunion-natur.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "Summery sandals to enjoy your vacation",
   },
   402: {
     name: "Black sandals",
     image: "images/sandalblack.jpg",
-    price: "$15.00",
+    price: "15.00",
     description: "Bold sandals to make a statement",
   },
   403: {
     name: "Braided sandals",
     image: "images/sandalbraid.jpeg",
-    price: "$15.00",
+    price: "15.00",
     description: "Authentic Braided sandal that throws you back in time ",
   },
   404: {
     name: "Birckenstock ",
     image: "images/birkenstocksandal.jpeg",
-    price: "$15.00",
+    price: "15.00",
     description: "Original brikenstock",
   },
   405: {
     name: "White sandals",
     image: "images/sandalwhite.jpeg",
-    price: "$15.00",
+    price: "15.00",
     description: "Perfect for a day in the sun!",
   },
 };
@@ -158,4 +158,105 @@ if (product) {
 } else {
   document.getElementById("product-details").innerHTML =
     "<p style='color: red;'>Product not found.</p>";
+}
+
+// Load cart if on cart page
+if (document.getElementById("cart-container")) {
+  loadCart();
+}
+
+// 🛒 Add Product to Cart (Ensure correct product is added!)
+function addToCart() {
+  if (!productId || !products[productId]) {
+    alert("Invalid product!");
+    return;
+  }
+
+  let cart = JSON.parse(sessionStorage.getItem("cart")) || {};
+
+  if (cart[productId]) {
+    cart[productId].quantity++;
+  } else {
+    cart[productId] = { ...products[productId], quantity: 1 };
+  }
+
+  sessionStorage.setItem("cart", JSON.stringify(cart));
+  alert(`${products[productId].name} added to cart!`);
+
+  // Redirect to cart.html after adding (optional)
+  window.location.href = "cart.html";
+}
+
+// 🛍 Load Cart in `cart.html`
+function loadCart() {
+  let cart = JSON.parse(sessionStorage.getItem("cart")) || {};
+  let cartContainer = document.getElementById("cart-container");
+
+  if (!cartContainer) return;
+  cartContainer.innerHTML = "";
+
+  let subtotal = 0;
+
+  for (let id in cart) {
+    let item = cart[id];
+    let total = item.price * item.quantity;
+    subtotal += total;
+
+    cartContainer.innerHTML += `
+    <div class="cart-item">
+        <img src="${item.image}" alt="${item.name}" class="cart-img">
+        <div class="cart-info">
+            <h2>${item.name}</h2>
+            <p>${item.description}</p>
+            <p><strong>Price:</strong> $${item.price.toFixed(2)}</p>
+            <p><strong>Total:</strong> $${total.toFixed(2)}</p>
+            <input type="number" value="${
+              item.quantity
+            }" min="1" data-id="${id}" class="cart-quantity">
+            <button onclick="removeFromCart('${id}')">Remove</button>
+        </div>
+    </div>
+  `;
+  }
+
+  updateCartSummary(subtotal);
+  addQuantityListeners();
+}
+
+// 🛒 Update Cart Summary (Dynamic Total Calculation)
+function updateCartSummary(subtotal) {
+  let tax = subtotal * 0.08;
+  let total = subtotal + tax;
+
+  document.getElementById("subtotal").innerText = `$${subtotal.toFixed(2)}`;
+  document.getElementById("tax").innerText = `$${tax.toFixed(2)}`;
+  document.getElementById("total").innerText = `$${total.toFixed(2)}`;
+}
+
+// 🔄 Handle Quantity Updates
+function addQuantityListeners() {
+  document.querySelectorAll(".cart-quantity").forEach((input) => {
+    input.addEventListener("change", function () {
+      let cart = JSON.parse(sessionStorage.getItem("cart")) || {};
+      let productId = this.getAttribute("data-id");
+      let newQuantity = parseInt(this.value);
+
+      if (newQuantity > 0) {
+        cart[productId].quantity = newQuantity;
+      } else {
+        delete cart[productId];
+      }
+
+      sessionStorage.setItem("cart", JSON.stringify(cart));
+      loadCart();
+    });
+  });
+}
+
+// 🗑 Remove Item from Cart
+function removeFromCart(productId) {
+  let cart = JSON.parse(sessionStorage.getItem("cart")) || {};
+  delete cart[productId];
+  sessionStorage.setItem("cart", JSON.stringify(cart));
+  loadCart();
 }

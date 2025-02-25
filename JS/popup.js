@@ -13,7 +13,7 @@ document.getElementById("close-btn").addEventListener("click", function () {
 
 const buttonElement = document.getElementById("Subscribe-button");
 const popupElement = document.getElementById("popup");
-const closeElement = document.getElementById("close");
+const closeElement = document.getElementById("close-btn");
 
 buttonElement.addEventListener("click", function (event) {
   popupElement.style.display = "flex";

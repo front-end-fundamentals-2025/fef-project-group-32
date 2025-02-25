@@ -255,15 +255,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*chat GPT*/
-const heartElement = document.getElementById("likedheart");
-const redElement = document.getElementById("redheart");
+const heartElement = document.getElementById("liked-container");
 
 heartElement.addEventListener("click", function (event) {
   if (heartElement.src.includes("whiteheart.svg")) {
-    heartElement.src = "Images/redheart.svg";
+    heartElement.src = "images/redheart.svg";
     heartElement.alt = "redheart";
   } else {
-    heartElement.src = "Images/whiteheart.svg";
+    heartElement.src = "images/whiteheart.svg";
     heartElement.alt = "whiteheart";
   }
 });

@@ -203,15 +203,15 @@ sizeOptions.forEach((option) => {
     option.classList.add("selected");
   });
 });
-if (existingProduct) {
-  existingProduct.quantity += 1;
-} else {
-  let newProduct = {
-    id: String(productId),
-    name: product.name,
-    price: product.price,
-    image: product.image,
-    quantity: 1,
-  };
-  cart.push(newProduct);
-}
+// if (existingProduct) {
+//   existingProduct.quantity += 1;
+// } else {
+//   let newProduct = {
+//     id: String(productId),
+//     name: product.name,
+//     price: product.price,
+//     image: product.image,
+//     quantity: 1,
+//   };
+//   cart.push(newProduct);
+// }

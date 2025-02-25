@@ -1,6 +1,6 @@
 let likedContainer = document.getElementById("liked-container");
 
-if (likedContainerContainer) {
+if (likedContainer) {
   let liked = JSON.parse(sessionStorage.getItem("liked")) || [];
 
   // Remove any `null` values from cart

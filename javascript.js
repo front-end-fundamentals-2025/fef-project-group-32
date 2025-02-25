@@ -68,7 +68,7 @@ const products = {
       "Super cozy boots designed to keep your feet warm in cold weather.",
   },
   204: {
-    name: "Unique boots",
+    name: "Animal print",
     image: "Images/the-nix-company-m6mAYVEHlNs-unsplash.jpg",
     price: "15.00",
     description:

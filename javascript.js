@@ -215,3 +215,41 @@ sizeOptions.forEach((option) => {
 //   };
 //   cart.push(newProduct);
 // }
+
+// Add product to liked
+document.addEventListener("DOMContentLoaded", function () {
+  let addToLikedButton = document.getElementById("likedheart");
+
+  if (addToLikedButton && product) {
+    addToLikedButton.addEventListener("click", function () {
+      console.log("🛒 Add to liked clicked!");
+
+      // Get current cart from sessionStorage
+      let liked = JSON.parse(sessionStorage.getItem("liked")) || [];
+
+      // Ensure product ID is stored as a string
+      let existingProduct = liked.find((item) => item.id === String(productId));
+
+      if (existingProduct) {
+        // If product is already in cart, increase quantity
+        existingProduct.quantity += 1;
+      } else {
+        // Add new product with quantity = 1
+        let newProduct = {
+          id: String(productId),
+          name: product.name,
+          price: parseFloat(product.price), // Convert price to number
+          image: product.image,
+          quantity: 1,
+        };
+        liked.push(newProduct);
+      }
+
+      // Save updated cart to sessionStorage
+      sessionStorage.setItem("liked", JSON.stringify(liked));
+
+      alert("✅ The product has been added to the liked!");
+      console.log("Updated liked:", liked);
+    });
+  }
+});

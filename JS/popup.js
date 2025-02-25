@@ -1,22 +1,13 @@
-/*const inputElement = document.getElementById("Subscribe-input");
-const buttonElement = document.getElementById("Subscribe-button");
-
-buttonElement.addEventListener("click", function (event) {
-  alert("Thank you for subscribing!");
-});
-
-
-document.getElementById("close-btn").addEventListener("click", function () {
-  document.getElementById("popup").style.display = "none";
-});
-*/
-
 const buttonElement = document.getElementById("Subscribe-button");
 const popupElement = document.getElementById("popup");
+const inputElement = document.getElementById("email-sub");
+const mailElement = document.getElementById("mail");
 const closeElement = document.getElementById("close-btn");
 
 buttonElement.addEventListener("click", function (event) {
   popupElement.style.display = "flex";
+  let enterdName = inputElement.value;
+  mailElement.innerText = enterdName;
 });
 
 closeElement.addEventListener("click", function (event) {

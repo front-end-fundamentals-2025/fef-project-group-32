@@ -6,7 +6,7 @@
     <title>Our Website</title>
     <link rel="stylesheet" href="css/main.css" />
     <script src="javascript.js" defer></script>
-    <script src="JS/popup.js"></script>
+    <script src="JS/popup.js" defer></script>
   </head>
   <body>
     <nav>
@@ -93,12 +93,19 @@
         exclusive deals!
       </p>
       <form>
-        <input type="email" placeholder="Enter your email" required />
+        <input
+          type="email"
+          placeholder="Enter your email"
+          id="email-sub"
+          required
+        />
         <button type="submit" id="Subscribe-button">Subscribe</button>
       </form>
       <div id="popup" class="popup">
         <div class="popup-content">
-          <p>Thank you for subscribing!</p>
+          <h3>Thank you for subscribing!</h3>
+          <p>You will get discounts and our newsletter to:</p>
+          <p id="mail">mail</p>
           <button id="close-btn">Close</button>
         </div>
       </div>

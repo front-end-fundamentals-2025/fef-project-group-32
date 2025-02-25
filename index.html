@@ -6,6 +6,7 @@
     <title>Our Website</title>
     <link rel="stylesheet" href="css/main.css" />
     <script src="javascript.js" defer></script>
+    <script src="JS/popup.js"></script>
   </head>
   <body>
     <nav>
@@ -93,8 +94,14 @@
       </p>
       <form>
         <input type="email" placeholder="Enter your email" required />
-        <button type="submit">Subscribe</button>
+        <button type="submit" id="Subscribe-button">Subscribe</button>
       </form>
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <p>Thank you for subscribing!</p>
+          <button id="close-btn">Close</button>
+        </div>
+      </div>
     </section>
     <footer>
       <div class="footer-content">

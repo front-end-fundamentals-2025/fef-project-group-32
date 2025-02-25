@@ -68,7 +68,7 @@ const products = {
       "Super cozy boots designed to keep your feet warm in cold weather.",
   },
   204: {
-    name: "Unique boots",
+    name: "Animal print",
     image: "Images/the-nix-company-m6mAYVEHlNs-unsplash.jpg",
     price: "15.00",
     description:
@@ -218,7 +218,7 @@ sizeOptions.forEach((option) => {
 
 // Add product to liked
 document.addEventListener("DOMContentLoaded", function () {
-  let addToLikedButton = document.getElementById("likedheart");
+  let addToLikedButton = document.getElementById("liked-container");
 
   if (addToLikedButton && product) {
     addToLikedButton.addEventListener("click", function () {

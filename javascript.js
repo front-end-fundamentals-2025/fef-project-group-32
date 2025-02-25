@@ -218,7 +218,7 @@ sizeOptions.forEach((option) => {
 
 // Add product to liked
 document.addEventListener("DOMContentLoaded", function () {
-  let addToLikedButton = document.getElementById("likedheart");
+  let addToLikedButton = document.getElementById("liked-container");
 
   if (addToLikedButton && product) {
     addToLikedButton.addEventListener("click", function () {

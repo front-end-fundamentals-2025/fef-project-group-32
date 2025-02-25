@@ -248,8 +248,22 @@ document.addEventListener("DOMContentLoaded", function () {
       // Save updated cart to sessionStorage
       sessionStorage.setItem("liked", JSON.stringify(liked));
 
-      alert("✅ The product has been added to the liked!");
+      //  alert("✅ The product has been added to the liked!");
       console.log("Updated liked:", liked);
     });
+  }
+});
+
+/*chat GPT*/
+const heartElement = document.getElementById("likedheart");
+const redElement = document.getElementById("redheart");
+
+heartElement.addEventListener("click", function (event) {
+  if (heartElement.src.includes("whiteheart.svg")) {
+    heartElement.src = "Images/redheart.svg";
+    heartElement.alt = "redheart";
+  } else {
+    heartElement.src = "Images/whiteheart.svg";
+    heartElement.alt = "whiteheart";
   }
 });

@@ -245,3 +245,11 @@ html,
 body {
   overflow-x: hidden;
 }
+
+/*responsive*/
+@media screen and (max-width: 1050px) {
+  nav,
+  ul {
+    flex-direction: column;
+  }
+}

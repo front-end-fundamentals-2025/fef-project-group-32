@@ -253,3 +253,7 @@ body {
     flex-direction: column;
   }
 }
+
+.search-button {
+  cursor: pointer;
+}

@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart</title>
-    <script src="javascript.js" defer></script>
-    <script src="cart.js" defer></script>
+    <title>Buy</title>
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/cart.css" />
-    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="buy.html" />
+    <script src="cart.js" defer></script>
+    <script src="javascript.js" defer></script>
   </head>
   <body>
     <nav>
@@ -36,11 +35,21 @@
       </div>
     </nav>
     <main>
-      <h1>Your cart</h1>
-      <div id="cart-container"></div>
-      <a href="buy.html">
-        <button class="add-to-cart">Buy</button>
-      </a>
+      <h1>Choose your payments</h1>
+      <img src="" alt="klarna" />
+      <img src="" alt="Apple Pay" />
+      <h1>Check your information</h1>
+      <form action="get">
+        <p>First name</p>
+        <input type="text" required />
+        <p>Last name</p>
+        <input type="text" required />
+        <p>Your adress</p>
+        <input type="text" required />
+        <p>Post code</p>
+        <input type="text" required />
+      </form>
+      <button>Proceed to pay</button>
     </main>
     <footer>
       <div class="footer-content">

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product 1</title>
+    <title>Product</title>
     <link rel="stylesheet" href="css/product.css" />
     <script src="javascript.js" defer></script>
     <script src="cart.js" defer></script>
@@ -28,7 +28,12 @@
       <div class="nav-icons">
         <input type="text" placeholder="Search.." class="search-box" />
         <a href="cart.html">
-          <img src="images/cart-icon.svg" alt="Cart icon" class="cartheart" />
+          <img
+            src="images/cart-icon.svg"
+            alt="Cart icon"
+            class="cartheart"
+            id="cart"
+          />
         </a>
         <a href="liked.html">
           <img src="images/whiteheart.svg" alt="Heart icon" class="cartheart" />
@@ -66,9 +71,6 @@
             class="liked-container"
             id="liked-container"
           />
-          <div>
-            <img src="Images/redheart.svg" alt="redheart icon" id="redheart" />
-          </div>
         </div>
 
         <section class="product-reviews">

@@ -259,10 +259,10 @@ const heartElement = document.getElementById("liked-container");
 
 heartElement.addEventListener("click", function (event) {
   if (heartElement.src.includes("whiteheart.svg")) {
-    heartElement.src = "images/redheart.svg";
+    heartElement.src = "Images/redheart.svg";
     heartElement.alt = "redheart";
   } else {
-    heartElement.src = "images/whiteheart.svg";
+    heartElement.src = "Images/whiteheart.svg";
     heartElement.alt = "whiteheart";
   }
 });

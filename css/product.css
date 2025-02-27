@@ -106,3 +106,20 @@
   margin: 10px;
   display: flex;
 }
+
+/*animation*/
+#cart {
+  animation-name: pop;
+  animation-duration: 2s;
+}
+@keyframes pop {
+  40% {
+    transform: scale(2);
+  }
+}
+
+/* Trigger the animation when the button is clicked
++ .cart-container #cart-icon */
+.add-to-cart:active #cart {
+  animation: pop 0.5s ease;
+}

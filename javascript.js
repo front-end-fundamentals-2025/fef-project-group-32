@@ -266,3 +266,18 @@ heartElement.addEventListener("click", function (event) {
     heartElement.alt = "whiteheart";
   }
 });
+
+function searchPage() {
+  let query = document.getElementById("search-box").value.toLowerCase();
+  if (query === "boots") {
+    window.location.href = "boots.html";
+  } else if (query === "sportshoes") {
+    window.location.href = "sportshoes.html";
+  } else if (query === "heels") {
+    window.location.href = "heels.html";
+  } else if (query === "sandals") {
+    window.location.href = "sandals.html";
+  } else {
+    window.location.href = "search.html";
+  }
+}

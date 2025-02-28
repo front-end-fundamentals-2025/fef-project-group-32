@@ -9,7 +9,7 @@ main {
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 30rem;
+  width: 30%;
 }
 .form-group {
   margin-bottom: 1rem;
@@ -101,3 +101,10 @@ button:hover {
   background-color: rgb(164, 194, 165);
 }
 /*  https://chatgpt.com/share/67b473ae-a644-8001-8302-5b8fe34375e1 */
+
+/*responsive*/
+@media screen and (max-width: 1050px) {
+  .login-form {
+    width: 300px;
+  }
+}

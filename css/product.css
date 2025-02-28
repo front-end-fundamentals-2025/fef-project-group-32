@@ -132,5 +132,7 @@
 @keyframes pop {
   40% {
     transform: scale(2);
+    /* is the backgroundcolor ugly, don't know if i like it or if i hate it, attracts attention */
+    background-color: rgb(197, 36, 36);
   }
 }

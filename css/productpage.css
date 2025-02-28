@@ -12,8 +12,6 @@
   width: 100%;
   height: 300px;
   object-fit: cover;
-  border: solid 3px #98ac96;
-  border-radius: 5%;
 }
 
 figure {
@@ -21,8 +19,7 @@ figure {
 }
 
 figcaption {
-  font-size: 1.5rem;
-  text-align: center;
+  font-size: 2rem;
 }
 
 a {
@@ -30,13 +27,9 @@ a {
   color: black;
 }
 
-/*animation*/
-#cart {
-  animation-name: pop;
-  animation-duration: 2s;
-}
-@keyframes pop {
-  40% {
-    transform: scale(1.5);
+@media screen and (max-width: 900px) {
+  .shoes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }

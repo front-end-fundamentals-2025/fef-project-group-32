@@ -27,7 +27,6 @@ if (likedContainer) {
       })
       .join("");
   }
-  //got this from chatGPT
 }
 
 function updateQuantity(index, change) {

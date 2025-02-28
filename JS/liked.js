@@ -28,12 +28,6 @@ if (likedContainer) {
       .join("");
   }
   //got this from chatGPT
-  let totalCartPrice = liked
-    .reduce((sum, item) => sum + parseFloat(item.price) * item.quantity, 0)
-    .toFixed(2);
-  likedContainer.innerHTML += `<h3>Total Cart Price: ${totalCartPrice} euros</h3>`;
-} else {
-  likedContainer.innerHTML = "<p>🛍️ The cart is empty.</p>";
 }
 
 function updateQuantity(index, change) {

@@ -64,10 +64,13 @@ nav {
   transform: scaleX(1);
 }
 
-.search-box {
-  padding: 5px;
-  border-radius: 5px;
+#search-box {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
   border: 1px solid #999;
+  border-radius: 8px;
+  padding: 5px;
 }
 
 .cartheart {

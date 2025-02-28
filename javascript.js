@@ -160,10 +160,15 @@ if (product) {
 // Add product to cart
 document.addEventListener("DOMContentLoaded", function () {
   let addToCartButton = document.getElementById("add-to-cart");
+  let cartIcon = document.getElementById("cart");
 
   if (addToCartButton && product) {
     addToCartButton.addEventListener("click", function () {
       console.log("🛒 Add to cart clicked!");
+
+      cartIcon.style.animation = "none";
+      void cartIcon.offsetWidth; // makes it go again if you click multiple times
+      cartIcon.style.animation = "pop 0.5s ease";
 
       // Get current cart from sessionStorage
       let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
@@ -203,18 +208,6 @@ sizeOptions.forEach((option) => {
     option.classList.add("selected");
   });
 });
-// if (existingProduct) {
-//   existingProduct.quantity += 1;
-// } else {
-//   let newProduct = {
-//     id: String(productId),
-//     name: product.name,
-//     price: product.price,
-//     image: product.image,
-//     quantity: 1,
-//   };
-//   cart.push(newProduct);
-// }
 
 // Add product to liked
 document.addEventListener("DOMContentLoaded", function () {
@@ -248,7 +241,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // Save updated cart to sessionStorage
       sessionStorage.setItem("liked", JSON.stringify(liked));
 
-      //  alert("✅ The product has been added to the liked!");
       console.log("Updated liked:", liked);
     });
   }

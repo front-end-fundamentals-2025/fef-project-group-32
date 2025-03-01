@@ -255,6 +255,9 @@ body {
   ul {
     flex-direction: column;
   }
+  .footer-content p {
+    margin-bottom: 2%;
+  }
 }
 
 @media screen and (max-width: 900px) {

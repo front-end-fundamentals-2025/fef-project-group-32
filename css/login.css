@@ -103,7 +103,7 @@ button:hover {
 /*  https://chatgpt.com/share/67b473ae-a644-8001-8302-5b8fe34375e1 */
 
 /*responsive*/
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1000px) {
   .login-form {
     width: 300px;
   }

@@ -136,3 +136,11 @@
     background-color: rgb(197, 36, 36);
   }
 }
+
+/*responsive*/
+@media screen and (max-width: 1300px) {
+  .product-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

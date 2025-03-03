@@ -19,7 +19,10 @@ figure {
 }
 
 figcaption {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-family: "montserrat", serif;
+  font-weight: bold;
+  text-align: center;
 }
 
 a {
@@ -39,4 +42,10 @@ a {
     display: grid;
     grid-template-columns: 1fr;
   }
+}
+.montserrat-uniquifier {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }

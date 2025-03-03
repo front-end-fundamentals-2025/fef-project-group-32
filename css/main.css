@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", serif;
 }
 
 body {
   background-color: #f1f2eb;
-  font-family: sans-serif;
+  font-family: "Montserrat", serif;
 }
 
 /* Navigation Bar */
@@ -284,4 +285,11 @@ body {
 
 .search-button {
   cursor: pointer;
+}
+
+.montserrat-uniquifier {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }

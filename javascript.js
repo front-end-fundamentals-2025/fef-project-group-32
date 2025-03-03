@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-/*chat GPT*/
+/*chat GPT
 const heartElement = document.getElementById("liked-container");
 
 heartElement.addEventListener("click", function (event) {
@@ -258,6 +258,7 @@ heartElement.addEventListener("click", function (event) {
     heartElement.alt = "whiteheart";
   }
 });
+*/
 
 function searchPage() {
   let query = document.getElementById("search-box").value.toLowerCase();

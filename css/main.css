@@ -252,6 +252,20 @@ body {
 
 /*responsive*/
 
+/* Mobile Styles */
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .category-grid {
     display: grid;

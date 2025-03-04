@@ -54,14 +54,18 @@ function removeFromLiked(index) {
   }
 }
 
-const heartElement = document.getElementById("liked-container");
-
-heartElement.addEventListener("click", function (event) {
-  if (heartElement.src.includes("whiteheart.svg")) {
-    heartElement.src = "Images/redheart.svg";
-    heartElement.alt = "redheart";
-  } else {
-    heartElement.src = "Images/whiteheart.svg";
-    heartElement.alt = "whiteheart";
+function changeImage() {
+  let img = document.getElementById("liked-container");
+  if (!img) {
+    console.log("Image not found!");
+    return;
   }
-});
+
+  if (img.src.endsWith("whiteheart.svg")) {
+    img.src = "images/redheart.svg";
+    console.log("Heart changed to red");
+  } else {
+    img.src = "images/whiteheart.svg";
+    console.log("Heart changed to white");
+  }
+}

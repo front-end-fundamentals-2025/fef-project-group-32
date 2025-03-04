@@ -18,6 +18,8 @@ nav {
   background-color: #d8dad3;
   padding: 0px 20px;
   width: 100%;
+  position: sticky;
+  top: 0;
 }
 
 /*the underline animation is made ny chatgpt */
@@ -84,7 +86,7 @@ nav {
   width: 100px;
   height: auto;
   max-height: 110px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .feature-container {
@@ -242,12 +244,6 @@ footer {
   text-decoration: none;
   color: black;
   font-weight: bold;
-}
-
-/* Prevents Overflow */
-html,
-body {
-  overflow-x: hidden;
 }
 
 /*responsive*/

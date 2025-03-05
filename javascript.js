@@ -257,8 +257,7 @@ heartElement.addEventListener("click", function (event) {
     heartElement.src = "Images/whiteheart.svg";
     heartElement.alt = "whiteheart";
   }
-});
-*/
+});*/
 
 function searchPage() {
   let query = document.getElementById("search-box").value.toLowerCase();

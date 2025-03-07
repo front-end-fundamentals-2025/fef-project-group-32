@@ -60,35 +60,3 @@ function removeFromCart(index) {
     sessionStorage.setItem("cart", JSON.stringify(cart));
   }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  let addToCartButton = document.getElementById("add-to-cart");
-  let cartIcon = document.getElementById("cart"); // Navbar cart icon
-
-  if (addToCartButton && cartIcon) {
-    addToCartButton.addEventListener("click", function () {
-      console.log("Cart button clicked! Changing image...");
-
-      // Force browser to reload the image by creating a new Image object
-      let newImage = new Image();
-      newImage.src = "images/cart-icon-red.svg?" + new Date().getTime();
-      newImage.onload = function () {
-        cartIcon.src = newImage.src; // Change to red cart icon
-      };
-
-      // Add pop animation
-      cartIcon.classList.add("cart-pop");
-
-      // After 0.5s, revert back to original cart icon
-      setTimeout(() => {
-        let originalImage = new Image();
-        originalImage.src = "images/cart-icon.svg?" + new Date().getTime();
-        originalImage.onload = function () {
-          cartIcon.src = originalImage.src; // Change back to normal cart icon
-          cartIcon.classList.remove("cart-pop"); // Remove animation
-          console.log("Cart image reverted back.");
-        };
-      }, 500);
-    });
-  }
-});

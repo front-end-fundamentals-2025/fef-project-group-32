@@ -276,7 +276,7 @@ function changeCartImageTemporarily() {
     return;
   }
 
-  cartIcon.src = "images/redheart.svg";
+  cartIcon.src = "Images/redheart.svg";
   console.log("Cart icon changed to red");
 
   if (cartResetTimer) {

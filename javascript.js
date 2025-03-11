@@ -76,7 +76,7 @@ const products = {
   },
   205: {
     name: "Pink boots",
-    image: "images/pinkboots.jpg",
+    image: "Images/pinkboots.jpg",
     price: "15.00",
     description: "Cute pink boots for children!",
   },
@@ -245,19 +245,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-/*chat GPT
-const heartElement = document.getElementById("liked-container");
-
-heartElement.addEventListener("click", function (event) {
-  if (heartElement.src.includes("whiteheart.svg")) {
-    heartElement.src = "Images/redheart.svg";
-    heartElement.alt = "redheart";
-  } else {
-    heartElement.src = "Images/whiteheart.svg";
-    heartElement.alt = "whiteheart";
-  }
-});*/
 
 function searchPage() {
   let query = document.getElementById("search-box").value.toLowerCase();

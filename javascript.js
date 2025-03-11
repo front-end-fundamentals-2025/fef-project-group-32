@@ -107,7 +107,7 @@ const products = {
   },
   305: {
     name: "Red heels",
-    image: "images/redheels.jpg",
+    image: "Images/redheels.jpg",
     price: "15.00",
     description: "They say red is the color of love...",
   },

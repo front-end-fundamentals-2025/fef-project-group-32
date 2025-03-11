@@ -95,7 +95,7 @@ const products = {
   },
   303: {
     name: "Brown Low heels ",
-    image: "Images/heels3.jpg",
+    image: "Images/heels3.jpg.webp",
     price: "15.00",
     description: "Traditional heel",
   },

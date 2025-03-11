@@ -6,20 +6,20 @@ const products = {
   //sportshoes
   123: {
     name: "Yellow Jordans",
-    image: "images/yellowjordans.jpg",
+    image: "Images/yellowjordans.jpg",
     price: "10.00",
     description:
       "vibrant yellow upper that not only catches the eye but also redefines street style.",
   },
   124: {
     name: "Green Jordans",
-    image: "images/greenjordans.jpg",
+    image: "Images/greenjordans.jpg",
     price: "15.00",
     description: "Stylish and comfortable green Jordans for everyday wear.",
   },
   125: {
     name: "Colorful shoes",
-    image: "images/colorfulshoes.jpg",
+    image: "Images/colorfulshoes.jpg",
     price: "15.00",
     description: "A mix of colors to brighten your outfit and your day!",
   },
@@ -43,7 +43,7 @@ const products = {
   },
   129: {
     name: "white runner shoes",
-    image: "images/whiterrunshoues.jpg",
+    image: "Images/whiterrunshoues.jpg",
     price: "15.00",
     description: "Lightweight and comfortable running shoes for everyday use.",
   },
@@ -62,21 +62,21 @@ const products = {
   },
   203: {
     name: "Warm boots ",
-    image: "Images/nathan-dumlao-qxcQG21m_qE-unsplash.jpg",
+    image: "images/nathan-dumlao-qxcQG21m_qE-unsplash.jpg",
     price: "15.00",
     description:
       "Super cozy boots designed to keep your feet warm in cold weather.",
   },
   204: {
     name: "Animal print",
-    image: "Images/the-nix-company-m6mAYVEHlNs-unsplash.jpg",
+    image: "images/the-nix-company-m6mAYVEHlNs-unsplash.jpg",
     price: "15.00",
     description:
       "Stand out with these uniquely designed boots that make a statement.",
   },
   205: {
     name: "Pink boots",
-    image: "images/pinkboots.jpg",
+    image: "Images/pinkboots.jpg",
     price: "15.00",
     description: "Cute pink boots for children!",
   },

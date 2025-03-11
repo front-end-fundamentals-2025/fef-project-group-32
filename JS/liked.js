@@ -65,7 +65,7 @@ function changeImage() {
     img.src = "Images/redheart.svg";
     console.log("Heart changed to red");
   } else {
-    img.src = "images/whiteheart.svg";
+    img.src = "Images/whiteheart.svg";
     console.log("Heart changed to white");
   }
 }

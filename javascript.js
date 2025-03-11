@@ -281,3 +281,34 @@ const navLinks = document.querySelector(".nav-links");
 mobileMenu.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
+let cartResetTimer;
+
+function changeCartImageTemporarily() {
+  let cartIcon = document.getElementById("cart");
+
+  if (!cartIcon) {
+    console.log("Cart icon not found!");
+    return;
+  }
+
+  cartIcon.src = "images/cart-icon-red.svg";
+  console.log("Cart icon changed to red");
+
+  if (cartResetTimer) {
+    clearTimeout(cartResetTimer);
+  }
+
+  cartResetTimer = setTimeout(() => {
+    cartIcon.src = "images/cart-icon.svg";
+    console.log("Cart icon reverted to default");
+  }, 500);
+}
+
+// Attach event listener to the add-to-cart button
+document.addEventListener("DOMContentLoaded", function () {
+  let addToCartButton = document.getElementById("add-to-cart");
+
+  if (addToCartButton) {
+    addToCartButton.addEventListener("click", changeCartImageTemporarily);
+  }
+});

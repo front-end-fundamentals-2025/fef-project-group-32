@@ -224,10 +224,8 @@ document.addEventListener("DOMContentLoaded", function () {
       let existingProduct = liked.find((item) => item.id === String(productId));
 
       if (existingProduct) {
-        // If product is already in cart, increase quantity
         existingProduct.quantity += 1;
       } else {
-        // Add new product with quantity = 1
         let newProduct = {
           id: String(productId),
           name: product.name,
@@ -278,7 +276,7 @@ function changeCartImageTemporarily() {
     return;
   }
 
-  cartIcon.src = "Images/redheart.svg";
+  cartIcon.src = "images/redheart.svg";
   console.log("Cart icon changed to red");
 
   if (cartResetTimer) {

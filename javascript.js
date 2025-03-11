@@ -6,20 +6,20 @@ const products = {
   //sportshoes
   123: {
     name: "Yellow Jordans",
-    image: "Images/yellowjordans.jpg",
+    image: "images/yellowjordans.jpg",
     price: "10.00",
     description:
       "vibrant yellow upper that not only catches the eye but also redefines street style.",
   },
   124: {
     name: "Green Jordans",
-    image: "Images/greenjordans.jpg",
+    image: "images/greenjordans.jpg",
     price: "15.00",
     description: "Stylish and comfortable green Jordans for everyday wear.",
   },
   125: {
     name: "Colorful shoes",
-    image: "Images/colorfulshoes.jpg",
+    image: "images/colorfulshoes.jpg",
     price: "15.00",
     description: "A mix of colors to brighten your outfit and your day!",
   },
@@ -43,7 +43,7 @@ const products = {
   },
   129: {
     name: "white runner shoes",
-    image: "Images/whiterrunshoues.jpg",
+    image: "images/whiterrunshoues.jpg",
     price: "15.00",
     description: "Lightweight and comfortable running shoes for everyday use.",
   },
@@ -62,14 +62,14 @@ const products = {
   },
   203: {
     name: "Warm boots ",
-    image: "images/nathan-dumlao-qxcQG21m_qE-unsplash.jpg",
+    image: "Images/nathan-dumlao-qxcQG21m_qE-unsplash.jpg",
     price: "15.00",
     description:
       "Super cozy boots designed to keep your feet warm in cold weather.",
   },
   204: {
     name: "Animal print",
-    image: "images/the-nix-company-m6mAYVEHlNs-unsplash.jpg",
+    image: "Images/the-nix-company-m6mAYVEHlNs-unsplash.jpg",
     price: "15.00",
     description:
       "Stand out with these uniquely designed boots that make a statement.",
@@ -224,8 +224,10 @@ document.addEventListener("DOMContentLoaded", function () {
       let existingProduct = liked.find((item) => item.id === String(productId));
 
       if (existingProduct) {
+        // If product is already in cart, increase quantity
         existingProduct.quantity += 1;
       } else {
+        // Add new product with quantity = 1
         let newProduct = {
           id: String(productId),
           name: product.name,
@@ -276,7 +278,7 @@ function changeCartImageTemporarily() {
     return;
   }
 
-  cartIcon.src = "Images/redheart.svg";
+  cartIcon.src = "images/cart-icon-red.svg";
   console.log("Cart icon changed to red");
 
   if (cartResetTimer) {

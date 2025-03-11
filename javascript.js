@@ -95,19 +95,19 @@ const products = {
   },
   303: {
     name: "Brown Low heels ",
-    image: "images/heels3.jpg",
+    image: "Images/heels3.jpg",
     price: "15.00",
     description: "Traditional heel",
   },
   304: {
     name: "Bold Black heels ",
-    image: "images/heels4.jpg",
+    image: "Images/heels4.jpg",
     price: "$15.00",
     description: "Be bold, be brave, wear these stylish black heels",
   },
   305: {
     name: "Red heels",
-    image: "images/redheels.jpg",
+    image: "Images/redheels.jpg",
     price: "15.00",
     description: "They say red is the color of love...",
   },
@@ -278,7 +278,7 @@ function changeCartImageTemporarily() {
     return;
   }
 
-  cartIcon.src = "images/cart-icon-red.svg";
+  cartIcon.src = "Images/redheart.svg";
   console.log("Cart icon changed to red");
 
   if (cartResetTimer) {

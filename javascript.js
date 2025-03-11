@@ -101,7 +101,7 @@ const products = {
   },
   304: {
     name: "Bold Black heels ",
-    image: "images/heels4.jpg",
+    image: "images/heels4.jpeg",
     price: "$15.00",
     description: "Be bold, be brave, wear these stylish black heels",
   },

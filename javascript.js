@@ -43,7 +43,7 @@ const products = {
   },
   129: {
     name: "white runner shoes",
-    image: "images/whiterrunshoues.jpg",
+    image: "Images/whiterrunshoues.jpg",
     price: "15.00",
     description: "Lightweight and comfortable running shoes for everyday use.",
   },

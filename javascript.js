@@ -62,14 +62,14 @@ const products = {
   },
   203: {
     name: "Warm boots ",
-    image: "Images/nathan-dumlao-qxcQG21m_qE-unsplash.jpg",
+    image: "images/nathan-dumlao-qxcQG21m_qE-unsplash.jpg",
     price: "15.00",
     description:
       "Super cozy boots designed to keep your feet warm in cold weather.",
   },
   204: {
     name: "Animal print",
-    image: "Images/the-nix-company-m6mAYVEHlNs-unsplash.jpg",
+    image: "images/the-nix-company-m6mAYVEHlNs-unsplash.jpg",
     price: "15.00",
     description:
       "Stand out with these uniquely designed boots that make a statement.",

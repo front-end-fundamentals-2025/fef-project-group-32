@@ -32,8 +32,6 @@ if (cartContainer) {
     .reduce((sum, item) => sum + parseFloat(item.price) * item.quantity, 0)
     .toFixed(2);
   cartContainer.innerHTML += `<h3>Total Cart Price: ${totalCartPrice} euros</h3>`;
-} else {
-  cartContainer.innerHTML = "<p>🛍️ The cart is empty.</p>";
 }
 
 function updateQuantity(index, change) {

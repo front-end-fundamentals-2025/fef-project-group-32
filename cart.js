@@ -2,8 +2,7 @@ let cartContainer = document.getElementById("cart-container");
 
 if (cartContainer) {
   let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
-
-  // Remove any `null` values from cart
+  //remvoe null item from cart
   cart = cart.filter(
     (item) => item !== null && item !== undefined && item.name
   );

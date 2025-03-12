@@ -3,7 +3,7 @@ let likedContainer = document.getElementById("liked-container");
 if (likedContainer) {
   let liked = JSON.parse(sessionStorage.getItem("liked")) || [];
 
-  // Remove any `null` values from cart
+  // Remove any null from cart
   liked = liked.filter(
     (item) => item !== null && item !== undefined && item.name
   );

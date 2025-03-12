@@ -158,47 +158,45 @@ if (product) {
 }
 
 // Add product to cart
-document.addEventListener("DOMContentLoaded", function () {
-  let addToCartButton = document.getElementById("add-to-cart");
-  let cartIcon = document.getElementById("cart");
+let addToCartButton = document.getElementById("add-to-cart");
+let cartIcon = document.getElementById("cart");
 
-  if (addToCartButton && product) {
-    addToCartButton.addEventListener("click", function () {
-      console.log("🛒 Add to cart clicked!");
+if (addToCartButton && product) {
+  addToCartButton.addEventListener("click", function () {
+    console.log("🛒 Add to cart clicked!");
 
-      cartIcon.style.animation = "none";
-      void cartIcon.offsetWidth; // makes it go again if you click multiple times
-      cartIcon.style.animation = "pop 0.5s ease";
+    cartIcon.style.animation = "none";
+    void cartIcon.offsetWidth; // makes it go again if you click multiple times
+    cartIcon.style.animation = "pop 0.5s ease";
 
-      // Get current cart from sessionStorage
-      let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+    // Get current cart from sessionStorage
+    let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
 
-      // Ensure product ID is stored as a string
-      let existingProduct = cart.find((item) => item.id === String(productId));
+    // Ensure product ID is stored as a string
+    let existingProduct = cart.find((item) => item.id === String(productId));
 
-      if (existingProduct) {
-        // If product is already in cart, increase quantity
-        existingProduct.quantity += 1;
-      } else {
-        // Add new product with quantity = 1
-        let newProduct = {
-          id: String(productId),
-          name: product.name,
-          price: parseFloat(product.price), // Convert price to number
-          image: product.image,
-          quantity: 1,
-        };
-        cart.push(newProduct);
-      }
+    if (existingProduct) {
+      // If product is already in cart, increase quantity
+      existingProduct.quantity += 1;
+    } else {
+      // Add new product with quantity = 1
+      let newProduct = {
+        id: String(productId),
+        name: product.name,
+        price: parseFloat(product.price), // Convert price to number
+        image: product.image,
+        quantity: 1,
+      };
+      cart.push(newProduct);
+    }
 
-      // Save updated cart to sessionStorage
-      sessionStorage.setItem("cart", JSON.stringify(cart));
+    // Save updated cart to sessionStorage
+    sessionStorage.setItem("cart", JSON.stringify(cart));
 
-      alert("✅ The product has been added to the cart!");
-      console.log("Updated cart:", cart);
-    });
-  }
-});
+    alert("✅ The product has been added to the cart!");
+    console.log("Updated cart:", cart);
+  });
+}
 
 const sizeOptions = document.querySelectorAll(".size-option");
 
@@ -210,41 +208,37 @@ sizeOptions.forEach((option) => {
 });
 
 // Add product to liked
-document.addEventListener("DOMContentLoaded", function () {
-  let addToLikedButton = document.getElementById("liked-container");
 
-  if (addToLikedButton && product) {
-    addToLikedButton.addEventListener("click", function () {
-      console.log("🛒 Add to liked clicked!");
+let addToLikedButton = document.getElementById("liked-container");
 
-      // Get current cart from sessionStorage
-      let liked = JSON.parse(sessionStorage.getItem("liked")) || [];
+if (addToLikedButton && product) {
+  addToLikedButton.addEventListener("click", function () {
+    console.log("🛒 Add to liked clicked!");
 
-      // Ensure product ID is stored as a string
-      let existingProduct = liked.find((item) => item.id === String(productId));
+    let liked = JSON.parse(sessionStorage.getItem("liked")) || [];
 
-      if (existingProduct) {
-        // If product is already in cart, increase quantity
-        existingProduct.quantity += 1;
-      } else {
-        // Add new product with quantity = 1
-        let newProduct = {
-          id: String(productId),
-          name: product.name,
-          price: parseFloat(product.price), // Convert price to number
-          image: product.image,
-          quantity: 1,
-        };
-        liked.push(newProduct);
-      }
+    let existingProduct = liked.find((item) => item.id === String(productId));
 
-      // Save updated cart to sessionStorage
-      sessionStorage.setItem("liked", JSON.stringify(liked));
+    if (existingProduct) {
+      // If product is already in cart, increase quantity
+      existingProduct.quantity += 1;
+    } else {
+      let newProduct = {
+        id: String(productId),
+        name: product.name,
+        price: parseFloat(product.price), // Convert price to number
+        image: product.image,
+        quantity: 1,
+      };
+      liked.push(newProduct);
+    }
 
-      console.log("Updated liked:", liked);
-    });
-  }
-});
+    // Save updated cart to sessionStorage
+    sessionStorage.setItem("liked", JSON.stringify(liked));
+
+    console.log("Updated liked:", liked);
+  });
+}
 
 function searchPage() {
   let query = document.getElementById("search-box").value.toLowerCase();
@@ -261,7 +255,7 @@ function searchPage() {
   }
 }
 
-//menue toggle
+//menu toggle help from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp and chatgpt
 const mobileMenu = document.getElementById("mobile-menu");
 const navLinks = document.querySelector(".nav-links");
 
@@ -290,12 +284,7 @@ function changeCartImageTemporarily() {
     console.log("Cart icon reverted to default");
   }, 500);
 }
-
-// Attach event listener to the add-to-cart button
-document.addEventListener("DOMContentLoaded", function () {
-  let addToCartButton = document.getElementById("add-to-cart");
-
-  if (addToCartButton) {
-    addToCartButton.addEventListener("click", changeCartImageTemporarily);
-  }
-});
+//change cart red
+if (addToCartButton) {
+  addToCartButton.addEventListener("click", changeCartImageTemporarily);
+}

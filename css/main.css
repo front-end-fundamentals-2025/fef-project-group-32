@@ -305,12 +305,7 @@ footer {
     margin: 2%;
   }
   .nav-links {
-    display: none;
-    flex-direction: column;
-    background: rgb(164, 194, 165);
-    width: 5%;
-    position: absolute;
-    top: 110px;
+    max-width: 30%;
   }
 }
 

@@ -260,7 +260,7 @@ footer {
 @media screen and (max-width: 1090px) {
   .menu-toggle {
     display: block;
-    padding-right: 180px;
+    padding-right: 20%;
   }
   .nav-links {
     display: none;
@@ -280,6 +280,9 @@ footer {
   .nav-links li {
     text-align: center;
   }
+  .footer-content p {
+    margin-bottom: 2%;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -295,11 +298,19 @@ footer {
   .newsletter input {
     margin-bottom: 5%;
   }
-}
-
-@media (max-width: 1090px) {
-  .footer-content p {
-    margin-bottom: 2%;
+  .nav-icons {
+    gap: 0.5rem;
+  }
+  .nav-icons img {
+    margin: 2%;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgb(164, 194, 165);
+    width: 5%;
+    position: absolute;
+    top: 110px;
   }
 }
 

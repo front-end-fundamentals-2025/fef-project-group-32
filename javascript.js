@@ -172,14 +172,13 @@ if (addToCartButton && product) {
     // Get current cart from sessionStorage
     let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
 
-    // Ensure product ID is stored as a string
     let existingProduct = cart.find((item) => item.id === String(productId));
 
     if (existingProduct) {
-      // If product is already in cart, increase quantity
+      // If product is already in the cart, increase quantity
       existingProduct.quantity += 1;
     } else {
-      // Add new product with quantity = 1
+      // If not the same product then add new product with quantity = 1
       let newProduct = {
         id: String(productId),
         name: product.name,
@@ -239,7 +238,9 @@ if (addToLikedButton && product) {
     console.log("Updated liked:", liked);
   });
 }
-
+//the search box function
+//if you write any of the categories you will come to the page
+// otherwise you will come to no result page
 function searchPage() {
   let query = document.getElementById("search-box").value.toLowerCase();
   if (query === "boots") {
@@ -263,7 +264,7 @@ mobileMenu.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 let cartResetTimer;
-
+//animation changes cart to red when clicking add to cart
 function changeCartImageTemporarily() {
   let cartIcon = document.getElementById("cart");
 

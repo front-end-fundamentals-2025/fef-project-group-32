@@ -53,7 +53,7 @@ function removeFromLiked(index) {
     sessionStorage.setItem("liked", JSON.stringify(liked));
   }
 }
-
+//If you click on heart it changes to red
 function changeImage() {
   let img = document.getElementById("liked-container");
   if (!img) {

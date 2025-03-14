@@ -7,14 +7,15 @@ if (cartContainer) {
     (item) => item !== null && item !== undefined && item.name
   );
   //got help from chat GPT
+  //shows how the cart will look like when you put something to the cart
   if (cart.length > 0) {
     cartContainer.innerHTML = cart
       .map((item, index) => {
         return `
                     <div>
-                        <img src="${item.image}" width="50" alt="Produktbild">
+                        <img src="${item.image}" width="50" alt="Productimage">
                         <p>${item.name} - ${item.price} euros</p>
-                        <p>Antal: 
+                        <p>Quantity: 
                             <button onclick="updateQuantity(${index}, -1)">➖</button> 
                             ${item.quantity} 
                             <button onclick="updateQuantity(${index}, 1)">➕</button>
@@ -32,7 +33,7 @@ if (cartContainer) {
     .toFixed(2);
   cartContainer.innerHTML += `<h3>Total Cart Price: ${totalCartPrice} euros</h3>`;
 }
-
+//Updated the quantity
 function updateQuantity(index, change) {
   let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
 
